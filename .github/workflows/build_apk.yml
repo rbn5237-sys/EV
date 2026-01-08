@@ -41,11 +41,11 @@ jobs:
 
       - name: Decode placeholder icons (base64 -> png)
         run: |
-          # If .png files are missing, decode provided base64 placeholders
-          if [ ! -f assets/icon/app_icon.png ] && [ -f assets/icon/app_icon.png.b64 ]; then
+          # Always decode/overwrite placeholder PNGs from .b64 to ensure valid PNGs
+          if [ -f assets/icon/app_icon.png.b64 ]; then
             base64 --decode assets/icon/app_icon.png.b64 > assets/icon/app_icon.png || true
           fi
-          if [ ! -f assets/icon/app_icon_foreground.png ] && [ -f assets/icon/app_icon_foreground.png.b64 ]; then
+          if [ -f assets/icon/app_icon_foreground.png.b64 ]; then
             base64 --decode assets/icon/app_icon_foreground.png.b64 > assets/icon/app_icon_foreground.png || true
           fi
 
