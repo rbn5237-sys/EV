@@ -33,6 +33,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^3.0.1
   flutter_launcher_icons: ^0.13.1
+  flutter_launcher_name: ^0.0.1
 
 flutter_launcher_icons:
   android: true
@@ -40,6 +41,13 @@ flutter_launcher_icons:
   image_path: "assets/icon/app_icon.png"
   adaptive_icon_background: "#1a237e"
   adaptive_icon_foreground: "assets/icon/app_icon_foreground.png"
+
+# Set the display name used by the launcher-name tool. After running
+# `flutter pub get`, run `flutter pub run flutter_launcher_name:main`
+# to apply the name to platform projects (Android/iOS). This is
+# useful if platform folders are later created (via `flutter create .`).
+flutter_launcher_name:
+  name: EV
 
 flutter:
   uses-material-design: true
