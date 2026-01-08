@@ -43,9 +43,7 @@ jobs:
           # generate adaptive icons from assets/icon (flutter_launcher_icons)
           flutter pub run flutter_launcher_icons:main || true
 
-      - name: Set app display name (if flutter_launcher_name present)
-        run: |
-          flutter pub run flutter_launcher_name:main || true
+
 
       - name: Build release APK
         run: flutter build apk --release
