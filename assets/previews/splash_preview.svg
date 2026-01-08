@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b3d91"/>
+      <stop offset="100%" stop-color="#3f51b5"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+
+  <!-- App emblem -->
+  <g transform="translate(540,520)" filter="url(#glow)">
+    <circle r="140" fill="#ffffff" opacity="0.08"/>
+    <rect x="-70" y="-70" width="140" height="140" rx="28" fill="#ffffff" opacity="0.12"/>
+    <g transform="translate(-48,-28)">
+      <path d="M24 0 L96 0 L72 48 L24 48 Z" fill="#fff" opacity="0.95"/>
+      <circle cx="60" cy="96" r="24" fill="#fff" opacity="0.95"/>
+    </g>
+  </g>
+
+  <text x="540" y="920" font-family="Segoe UI, Roboto, Arial" font-size="56" fill="#ffffff" text-anchor="middle" font-weight="700">EV Student App</text>
+  <text x="540" y="980" font-family="Segoe UI, Roboto, Arial" font-size="20" fill="#e8eaf6" text-anchor="middle">Local — Pakistan • Manage classes, students & exports</text>
+
+  <g transform="translate(0,1280)">
+    <rect x="140" y="0" width="800" height="90" rx="45" fill="#ffffff" opacity="0.12"/>
+    <text x="540" y="60" font-family="Segoe UI, Roboto, Arial" font-size="22" fill="#ffffff" text-anchor="middle">Loading…</text>
+  </g>
+
+  <text x="540" y="1850" font-family="Segoe UI, Roboto, Arial" font-size="16" fill="#d1d8ff" text-anchor="middle">Made for Pakistan • Sample data shows +92 phone codes</text>
+</svg>

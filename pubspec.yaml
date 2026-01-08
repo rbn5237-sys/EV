@@ -1,0 +1,54 @@
+name: ev_app
+description: EV - Student Management App with offline support
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  path_provider: ^2.1.1
+  provider: ^6.1.1
+  shared_preferences: ^2.2.2
+  url_launcher: ^6.2.1
+  share_plus: ^7.2.1
+  pdf: ^3.10.7
+  printing: ^5.11.1
+  flutter_secure_storage: ^9.0.0
+  intl: ^0.18.1
+  flutter_animate: ^4.3.0
+  google_fonts: ^6.1.0
+  flutter_staggered_animations: ^1.1.1
+  permission_handler: ^11.1.0
+  crypto: ^3.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+  adaptive_icon_background: "#1a237e"
+  adaptive_icon_foreground: "assets/icon/app_icon_foreground.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/fonts/
+  fonts:
+    - family: NotoNaskhArabic
+      fonts:
+        - asset: assets/fonts/NotoNaskhArabic-Regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf

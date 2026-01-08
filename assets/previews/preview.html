@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>EV App - Localized Preview</title>
+  <style>
+    body{font-family:Segoe UI, Roboto, Arial;background:#f3f4f6;padding:24px}
+    .thumb{width:320px;border:1px solid #ddd;border-radius:8px;overflow:hidden;margin:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);background:#fff}
+    .row{display:flex;flex-wrap:wrap}
+    .caption{text-align:center;padding:10px 12px;background:#fff}
+    a{color:#0b3d91;text-decoration:none}
+    h1{color:#0b3d91}
+  </style>
+</head>
+<body>
+  <h1>EV App — Localized Preview (Pakistan)</h1>
+  <p>These are static, polished mockups reflecting a Pakistani look-and-feel (names, phone codes +92, Urdu/English friendly fonts). Open SVGs to view full size.</p>
+  <div class="row">
+    <div class="thumb"><a href="splash_preview.svg"><img src="splash_preview.svg" alt="splash" width="320"/></a><div class="caption">Splash</div></div>
+    <div class="thumb"><a href="home_preview.svg"><img src="home_preview.svg" alt="home" width="320"/></a><div class="caption">Home / Dashboard</div></div>
+    <div class="thumb"><a href="class_preview.svg"><img src="class_preview.svg" alt="class" width="320"/></a><div class="caption">Class List</div></div>
+    <div class="thumb"><a href="student_preview.svg"><img src="student_preview.svg" alt="student" width="320"/></a><div class="caption">Student Detail</div></div>
+  </div>
+
+  <h3>Notes & final checks</h3>
+  <ul>
+    <li>Phone formats in mockups use Pakistan country code <strong>+92</strong>. In the app ensure `validators.validatePhone` accepts and normalizes `+92` prefixes.</li>
+    <li>Names shown are Pakistani: Ali Ahmed, Sara Khan, Meesam Raza. Update your sample DB population in <strong>lib/database/database_helper.dart</strong> if desired.</li>
+    <li>Replace the placeholder icon at <strong>assets/icon/app_icon.png</strong> with a proper adaptive icon before release.</li>
+    <li>To preview the real app, run <code>flutter pub get</code> and <code>flutter run</code> on your machine (see README).</li>
+  </ul>
+
+  <p>Files are in <strong>assets/previews/</strong>. Open <strong>preview.html</strong> in your browser (double-click) to view.</p>
+</body>
+</html>
