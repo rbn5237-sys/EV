@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <circle cx="256" cy="256" r="200" fill="#fff" />
-  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="160" fill="#1a237e" text-anchor="middle" dominant-baseline="central">E</text>
+  <g transform="translate(0,0)">
+    <circle cx="256" cy="256" r="200" fill="#ffffff" />
+    <path d="M190 300 L260 180 L230 180 L300 80 L220 80 L150 200 L190 200 Z" fill="#0b3d91" opacity="0.95" />
+    <text x="256" y="360" font-family="Noto Sans, Arial" font-size="120" fill="#0b3d91" font-weight="700" text-anchor="middle">EV</text>
+  </g>
 </svg>
