@@ -44,11 +44,9 @@ flutter_launcher_icons:
 flutter:
   uses-material-design: true
   assets:
-    - assets/fonts/
-  fonts:
-    - family: NotoNaskhArabic
-      fonts:
-        - asset: assets/fonts/NotoNaskhArabic-Regular.ttf
-    - family: Roboto
-      fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf
+    - assets/icon/
+    - assets/previews/
+  # Note: fonts are not included here to avoid build errors while the
+  # actual TTF files are not present in `assets/fonts/`.
+  # To restore custom fonts, add your TTF files to `assets/fonts/`
+  # and re-add a `fonts:` section here.
