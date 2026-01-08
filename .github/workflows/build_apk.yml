@@ -38,9 +38,20 @@ jobs:
       - name: Flutter pub get
         run: flutter pub get
 
-      - name: (skip) Generate launcher icons
-        run: echo "Skipping launcher icon generation in CI to avoid image decode errors"
 
+      - name: Decode placeholder icons (base64 -> png)
+        run: |
+          # If .png files are missing, decode provided base64 placeholders
+          if [ ! -f assets/icon/app_icon.png ] && [ -f assets/icon/app_icon.png.b64 ]; then
+            base64 --decode assets/icon/app_icon.png.b64 > assets/icon/app_icon.png || true
+          fi
+          if [ ! -f assets/icon/app_icon_foreground.png ] && [ -f assets/icon/app_icon_foreground.png.b64 ]; then
+            base64 --decode assets/icon/app_icon_foreground.png.b64 > assets/icon/app_icon_foreground.png || true
+          fi
+
+      - name: Generate launcher icons
+        run: |
+          flutter pub run flutter_launcher_icons:main || true
 
       - name: Build release APK
         run: flutter build apk --release
