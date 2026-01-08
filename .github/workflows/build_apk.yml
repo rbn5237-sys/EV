@@ -20,6 +20,11 @@ jobs:
       - name: Accept Android licenses
         run: yes | sdkmanager --licenses
 
+      - name: Ensure platform folders
+        run: |
+          # Create Android/iOS platform folders if missing so build can run
+          flutter create . || true
+
       - name: Flutter pub get
         run: flutter pub get
 
